@@ -347,7 +347,7 @@ func (d *FileDescriptor) goPackageOption() (impPath GoImportPath, pkg GoPackageN
 // goFileName returns the output name for the generated Go file.
 func (d *FileDescriptor) goFileName(pathType pathType) string {
 	name := *d.Name
-	if ext := path.Ext(name); ext == ".proto" || ext == ".protodevel" {
+	if ext := path.Ext(name); ext == ".pb" || ext == ".proto" || ext == ".protodevel" {
 		name = name[:len(name)-len(ext)]
 	}
 	name += d.suffix
