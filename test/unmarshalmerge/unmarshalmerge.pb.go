@@ -3,10 +3,10 @@
 
 package unmarshalmerge
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/liues1992/gogoprotobuf/proto"
 import fmt "fmt"
 import math "math"
-import _ "github.com/gogo/protobuf/gogoproto"
+import _ "github.com/liues1992/gogoprotobuf/gogoproto"
 
 import bytes "bytes"
 
@@ -15,7 +15,7 @@ import reflect "reflect"
 
 import io "io"
 import encoding_binary "encoding/binary"
-import github_com_gogo_protobuf_proto "github.com/gogo/protobuf/proto"
+import github_com_gogo_protobuf_proto "github.com/liues1992/gogoprotobuf/proto"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal

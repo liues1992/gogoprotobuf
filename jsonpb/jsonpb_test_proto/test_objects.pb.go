@@ -3,12 +3,12 @@
 
 package jsonpb
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/liues1992/gogoprotobuf/proto"
 import fmt "fmt"
 import math "math"
 
-// skipping weak import gogoproto "github.com/gogo/protobuf/gogoproto"
-import types "github.com/gogo/protobuf/types"
+// skipping weak import gogoproto "github.com/liues1992/gogoprotobuf/gogoproto"
+import types "github.com/liues1992/gogoprotobuf/types"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal

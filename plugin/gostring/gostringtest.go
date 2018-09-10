@@ -29,9 +29,9 @@
 package gostring
 
 import (
-	"github.com/gogo/protobuf/gogoproto"
-	"github.com/gogo/protobuf/plugin/testgen"
-	"github.com/gogo/protobuf/protoc-gen-gogo/generator"
+	"github.com/liues1992/gogoprotobuf/gogoproto"
+	"github.com/liues1992/gogoprotobuf/plugin/testgen"
+	"github.com/liues1992/gogoprotobuf/protoc-gen-gogo/generator"
 )
 
 type test struct {

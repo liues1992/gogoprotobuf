@@ -3,11 +3,11 @@
 
 package events
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/liues1992/gogoprotobuf/proto"
 import fmt "fmt"
 import math "math"
-import _ "github.com/gogo/protobuf/gogoproto"
-import issue312 "github.com/gogo/protobuf/test/issue312"
+import _ "github.com/liues1992/gogoprotobuf/gogoproto"
+import issue312 "github.com/liues1992/gogoprotobuf/test/issue312"
 
 import bytes "bytes"
 

@@ -29,7 +29,7 @@
 package fuzztests
 
 import (
-	"github.com/gogo/protobuf/proto"
+	"github.com/liues1992/gogoprotobuf/proto"
 	"testing"
 )
 

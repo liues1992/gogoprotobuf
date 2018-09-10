@@ -30,7 +30,7 @@ package issue34
 
 import (
 	"bytes"
-	"github.com/gogo/protobuf/proto"
+	"github.com/liues1992/gogoprotobuf/proto"
 	"testing"
 )
 

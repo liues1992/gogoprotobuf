@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/gogo/protobuf/jsonpb"
+	"github.com/liues1992/gogoprotobuf/jsonpb"
 )
 
 type Dropped struct {

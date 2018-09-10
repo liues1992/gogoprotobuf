@@ -3,7 +3,7 @@
 
 package types
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/liues1992/gogoprotobuf/proto"
 import fmt "fmt"
 import math "math"
 
@@ -13,7 +13,7 @@ import bytes "bytes"
 
 import strings "strings"
 import reflect "reflect"
-import github_com_gogo_protobuf_sortkeys "github.com/gogo/protobuf/sortkeys"
+import github_com_gogo_protobuf_sortkeys "github.com/liues1992/gogoprotobuf/sortkeys"
 
 import encoding_binary "encoding/binary"
 

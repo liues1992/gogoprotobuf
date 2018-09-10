@@ -30,7 +30,7 @@ package issue42
 
 import (
 	"bytes"
-	"github.com/gogo/protobuf/proto"
+	"github.com/liues1992/gogoprotobuf/proto"
 	math_rand "math/rand"
 	"testing"
 	time "time"

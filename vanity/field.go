@@ -29,9 +29,9 @@
 package vanity
 
 import (
-	"github.com/gogo/protobuf/gogoproto"
-	"github.com/gogo/protobuf/proto"
-	descriptor "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
+	"github.com/liues1992/gogoprotobuf/gogoproto"
+	"github.com/liues1992/gogoprotobuf/proto"
+	descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogo/descriptor"
 )
 
 func FieldHasBoolExtension(field *descriptor.FieldDescriptorProto, extension *proto.ExtensionDesc) bool {

@@ -3,13 +3,13 @@
 
 package importing
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/liues1992/gogoprotobuf/proto"
 import fmt "fmt"
 import math "math"
-import _ "github.com/gogo/protobuf/gogoproto"
-import _ "github.com/gogo/protobuf/test/importcustom-issue389/imported"
+import _ "github.com/liues1992/gogoprotobuf/gogoproto"
+import _ "github.com/liues1992/gogoprotobuf/test/importcustom-issue389/imported"
 
-import github_com_gogo_protobuf_test_importcustom_issue389_imported "github.com/gogo/protobuf/test/importcustom-issue389/imported"
+import github_com_gogo_protobuf_test_importcustom_issue389_imported "github.com/liues1992/gogoprotobuf/test/importcustom-issue389/imported"
 
 import bytes "bytes"
 
@@ -27,7 +27,7 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion2 // please upgrade the proto package
 
 type C struct {
-	F2                   *github_com_gogo_protobuf_test_importcustom_issue389_imported.B `protobuf:"bytes,1,opt,name=f2,customtype=github.com/gogo/protobuf/test/importcustom-issue389/imported.B" json:"f2,omitempty"`
+	F2                   *github_com_gogo_protobuf_test_importcustom_issue389_imported.B `protobuf:"bytes,1,opt,name=f2,customtype=github.com/liues1992/gogoprotobuf/test/importcustom-issue389/imported.B" json:"f2,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                                        `json:"-"`
 	XXX_unrecognized     []byte                                                          `json:"-"`
 	XXX_sizecache        int32                                                           `json:"-"`

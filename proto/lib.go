@@ -99,7 +99,7 @@ The resulting file, test.pb.go, is:
 
 	package example
 
-	import proto "github.com/gogo/protobuf/proto"
+	import proto "github.com/liues1992/gogoprotobuf/proto"
 	import math "math"
 
 	type FOO int32
@@ -226,7 +226,7 @@ To create and play with a Test object:
 	import (
 		"log"
 
-		"github.com/gogo/protobuf/proto"
+		"github.com/liues1992/gogoprotobuf/proto"
 		pb "./example.pb"
 	)
 

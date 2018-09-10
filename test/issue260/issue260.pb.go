@@ -3,15 +3,15 @@
 
 package issue260
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/liues1992/gogoprotobuf/proto"
 import fmt "fmt"
 import math "math"
-import _ "github.com/gogo/protobuf/gogoproto"
-import _ "github.com/gogo/protobuf/types"
+import _ "github.com/liues1992/gogoprotobuf/gogoproto"
+import _ "github.com/liues1992/gogoprotobuf/types"
 
 import time "time"
 
-import github_com_gogo_protobuf_types "github.com/gogo/protobuf/types"
+import github_com_gogo_protobuf_types "github.com/liues1992/gogoprotobuf/types"
 
 import io "io"
 

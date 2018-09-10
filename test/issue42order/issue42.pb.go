@@ -3,10 +3,10 @@
 
 package issue42
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/liues1992/gogoprotobuf/proto"
 import fmt "fmt"
 import math "math"
-import _ "github.com/gogo/protobuf/gogoproto"
+import _ "github.com/liues1992/gogoprotobuf/gogoproto"
 
 import encoding_binary "encoding/binary"
 

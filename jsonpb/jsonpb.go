@@ -51,8 +51,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gogo/protobuf/proto"
-	"github.com/gogo/protobuf/types"
+	"github.com/liues1992/gogoprotobuf/proto"
+	"github.com/liues1992/gogoprotobuf/types"
 )
 
 const secondInNanos = int64(time.Second / time.Nanosecond)

@@ -40,7 +40,7 @@ It is enabled by the following extensions:
 
 For incorrect usage of embed with tests see:
 
-  github.com/gogo/protobuf/test/embedconflict
+  github.com/liues1992/gogoprotobuf/test/embedconflict
 
 */
 package embedcheck
@@ -49,8 +49,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gogo/protobuf/gogoproto"
-	"github.com/gogo/protobuf/protoc-gen-gogo/generator"
+	"github.com/liues1992/gogoprotobuf/gogoproto"
+	"github.com/liues1992/gogoprotobuf/protoc-gen-gogo/generator"
 )
 
 type plugin struct {

@@ -8,11 +8,11 @@ package enumcustomname
 	enumvalue_customname extensions.
 */
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/liues1992/gogoprotobuf/proto"
 import fmt "fmt"
 import math "math"
-import _ "github.com/gogo/protobuf/gogoproto"
-import test "github.com/gogo/protobuf/test"
+import _ "github.com/liues1992/gogoprotobuf/gogoproto"
+import test "github.com/liues1992/gogoprotobuf/test"
 
 import strconv "strconv"
 

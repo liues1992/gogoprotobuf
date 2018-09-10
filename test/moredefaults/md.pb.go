@@ -3,11 +3,11 @@
 
 package moredefaults
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/liues1992/gogoprotobuf/proto"
 import fmt "fmt"
 import math "math"
-import _ "github.com/gogo/protobuf/gogoproto"
-import example "github.com/gogo/protobuf/test/example"
+import _ "github.com/liues1992/gogoprotobuf/gogoproto"
+import example "github.com/liues1992/gogoprotobuf/test/example"
 
 import bytes "bytes"
 

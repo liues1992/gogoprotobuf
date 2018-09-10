@@ -31,7 +31,7 @@ package packed
 import (
 	"bytes"
 	"fmt"
-	"github.com/gogo/protobuf/proto"
+	"github.com/liues1992/gogoprotobuf/proto"
 	math_rand "math/rand"
 	"runtime"
 	"testing"
@@ -89,7 +89,7 @@ func TestIssue436(t *testing.T) {
 }
 
 /*
-https://github.com/gogo/protobuf/issues/detail?id=21
+https://github.com/liues1992/gogoprotobuf/issues/detail?id=21
 https://developers.google.com/protocol-buffers/docs/proto#options
 In 2.3.0 and later, this change is safe, as parsers for packable fields will always accept both formats,
 */

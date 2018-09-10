@@ -3,7 +3,7 @@ package issue435
 import (
 	"testing"
 
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/liues1992/gogoprotobuf/proto"
 )
 
 func TestNonnullableDefaults(t *testing.T) {

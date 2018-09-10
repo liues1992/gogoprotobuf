@@ -29,11 +29,11 @@
 package compare
 
 import (
-	"github.com/gogo/protobuf/gogoproto"
-	"github.com/gogo/protobuf/proto"
-	descriptor "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
-	"github.com/gogo/protobuf/protoc-gen-gogo/generator"
-	"github.com/gogo/protobuf/vanity"
+	"github.com/liues1992/gogoprotobuf/gogoproto"
+	"github.com/liues1992/gogoprotobuf/proto"
+	descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogo/descriptor"
+	"github.com/liues1992/gogoprotobuf/protoc-gen-gogo/generator"
+	"github.com/liues1992/gogoprotobuf/vanity"
 )
 
 type plugin struct {
@@ -61,8 +61,8 @@ func (p *plugin) Generate(file *generator.FileDescriptor) {
 	p.PluginImports = generator.NewPluginImports(p.Generator)
 	p.fmtPkg = p.NewImport("fmt")
 	p.bytesPkg = p.NewImport("bytes")
-	p.sortkeysPkg = p.NewImport("github.com/gogo/protobuf/sortkeys")
-	p.protoPkg = p.NewImport("github.com/gogo/protobuf/proto")
+	p.sortkeysPkg = p.NewImport("github.com/liues1992/gogoprotobuf/sortkeys")
+	p.protoPkg = p.NewImport("github.com/liues1992/gogoprotobuf/proto")
 
 	for _, msg := range file.Messages() {
 		if msg.DescriptorProto.GetOptions().GetMapEntry() {
