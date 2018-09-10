@@ -5,11 +5,11 @@ package descriptor
 
 import fmt "fmt"
 import strings "strings"
-import github_com_gogo_protobuf_proto "github.com/liues1992/gogoprotobuf/proto"
+import github_com_gogo_protobuf_proto "github.com/gogo/protobuf/proto"
 import sort "sort"
 import strconv "strconv"
 import reflect "reflect"
-import proto "github.com/liues1992/gogoprotobuf/proto"
+import proto "github.com/gogo/protobuf/proto"
 import math "math"
 
 // Reference imports to suppress errors if they are not otherwise used.
