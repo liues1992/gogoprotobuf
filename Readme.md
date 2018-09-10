@@ -1,3 +1,9 @@
+Fork of gogo/protobuf
+======
+optional parameters added:
+1. json_emitdefault=1 remove the default "omitempty" in the json tag
+2. suffix=.customsuffix to specify custom suffix instead .pb.go
+
 # Protocol Buffers for Go with Gadgets
 
 [![Build Status](https://travis-ci.org/gogo/protobuf.svg?branch=master)](https://travis-ci.org/gogo/protobuf)
@@ -14,7 +20,7 @@ This code generation is used to achieve:
   - other serialization formats
 
 Keeping track of how up to date gogoprotobuf is relative to golang/protobuf is done in this
-<a href="https://github.com/gogo/protobuf/issues/191">issue</a>
+<a href="https://github.com/liues1992/gogoprotobuf/issues/191">issue</a>
 
 ## Users
 
@@ -82,15 +88,15 @@ Most versions from 2.3.1 should not give any problems, but 2.6.1, 3.0.2 and 3.5.
 
 ### Speed
 
-Install the protoc-gen-gofast binary
+Install the protoc-gen-gofastg binary
 
-    go get github.com/gogo/protobuf/protoc-gen-gofast
+    go get github.com/liues1992/gogoprotobuf/protoc-gen-gofastg
 
 Use it to generate faster marshaling and unmarshaling go code for your protocol buffers.
 
     protoc --gofast_out=. myproto.proto
 
-This does not allow you to use any of the other gogoprotobuf [extensions](https://github.com/gogo/protobuf/blob/master/extensions.md).
+This does not allow you to use any of the other gogoprotobuf [extensions](https://github.com/liues1992/gogoprotobuf/blob/master/extensions.md).
 
 ### More Speed and more generated code
 
@@ -99,30 +105,30 @@ More code generation results in more convenient methods.
 
 Other binaries are also included:
 
-    protoc-gen-gogofast (same as gofast, but imports gogoprotobuf)
-    protoc-gen-gogofaster (same as gogofast, without XXX_unrecognized, less pointer fields)
-    protoc-gen-gogoslick (same as gogofaster, but with generated string, gostring and equal methods)
+    protoc-gen-gogofastg (same as gofast, but imports gogoprotobuf)
+    protoc-gen-gogofasterg (same as gogofast, without XXX_unrecognized, less pointer fields)
+    protoc-gen-gogoslickg (same as gogofaster, but with generated string, gostring and equal methods)
 
 Installing any of these binaries is easy.  Simply run:
 
-    go get github.com/gogo/protobuf/proto
-    go get github.com/gogo/protobuf/{binary}
-    go get github.com/gogo/protobuf/gogoproto
+    go get github.com/liues1992/gogoprotobuf/proto
+    go get github.com/liues1992/gogoprotobuf/{binary}
+    go get github.com/liues1992/gogoprotobuf/gogoproto
 
-These binaries allow you to use gogoprotobuf [extensions](https://github.com/gogo/protobuf/blob/master/extensions.md). You can also use your own binary.
+These binaries allow you to use gogoprotobuf [extensions](https://github.com/liues1992/gogoprotobuf/blob/master/extensions.md). You can also use your own binary.
 
 To generate the code, you also need to set the include path properly.
 
-    protoc -I=. -I=$GOPATH/src -I=$GOPATH/src/github.com/gogo/protobuf/protobuf --{binary}_out=. myproto.proto
+    protoc -I=. -I=$GOPATH/src -I=$GOPATH/src/github.com/liues1992/gogoprotobuf/protobuf --{binary}_out=. myproto.proto
 
 To use proto files from "google/protobuf" you need to add additional args to protoc.
 
-    protoc -I=. -I=$GOPATH/src -I=$GOPATH/src/github.com/gogo/protobuf/protobuf --{binary}_out=\
-    Mgoogle/protobuf/any.proto=github.com/gogo/protobuf/types,\
-    Mgoogle/protobuf/duration.proto=github.com/gogo/protobuf/types,\
-    Mgoogle/protobuf/struct.proto=github.com/gogo/protobuf/types,\
-    Mgoogle/protobuf/timestamp.proto=github.com/gogo/protobuf/types,\
-    Mgoogle/protobuf/wrappers.proto=github.com/gogo/protobuf/types:. \
+    protoc -I=. -I=$GOPATH/src -I=$GOPATH/src/github.com/liues1992/gogoprotobuf/protobuf --{binary}_out=\
+    Mgoogle/protobuf/any.proto=github.com/liues1992/gogoprotobuf/types,\
+    Mgoogle/protobuf/duration.proto=github.com/liues1992/gogoprotobuf/types,\
+    Mgoogle/protobuf/struct.proto=github.com/liues1992/gogoprotobuf/types,\
+    Mgoogle/protobuf/timestamp.proto=github.com/liues1992/gogoprotobuf/types,\
+    Mgoogle/protobuf/wrappers.proto=github.com/liues1992/gogoprotobuf/types:. \
     myproto.proto
 
 Note that in the protoc command, {binary} does not contain the initial prefix of "protoc-gen".
@@ -132,14 +138,14 @@ Note that in the protoc command, {binary} does not contain the initial prefix of
 Customizing the fields of the messages to be the fields that you actually want to use removes the need to copy between the structs you use and structs you use to serialize.
 gogoprotobuf also offers more serialization formats and generation of tests and even more methods.
 
-Please visit the [extensions](https://github.com/gogo/protobuf/blob/master/extensions.md) page for more documentation.
+Please visit the [extensions](https://github.com/liues1992/gogoprotobuf/blob/master/extensions.md) page for more documentation.
 
-Install protoc-gen-gogo:
+Install protoc-gen-gogog:
 
-    go get github.com/gogo/protobuf/proto
-    go get github.com/gogo/protobuf/jsonpb
-    go get github.com/gogo/protobuf/protoc-gen-gogo
-    go get github.com/gogo/protobuf/gogoproto
+    go get github.com/liues1992/gogoprotobuf/proto
+    go get github.com/liues1992/gogoprotobuf/jsonpb
+    go get github.com/liues1992/gogoprotobuf/protoc-gen-gogog
+    go get github.com/liues1992/gogoprotobuf/gogoproto
 
 ## GRPC
 
