@@ -33,7 +33,7 @@ import (
 
 	"github.com/liues1992/gogoprotobuf/gogoproto"
 	"github.com/liues1992/gogoprotobuf/proto"
-	descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogo/descriptor"
+	descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogog/descriptor"
 )
 
 func NotGoogleProtobufDescriptorProto(file *descriptor.FileDescriptorProto) bool {

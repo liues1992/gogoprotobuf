@@ -39,7 +39,7 @@ package oneofcheck
 import (
 	"fmt"
 	"github.com/liues1992/gogoprotobuf/gogoproto"
-	"github.com/liues1992/gogoprotobuf/protoc-gen-gogo/generator"
+	"github.com/liues1992/gogoprotobuf/protoc-gen-gogog/generator"
 	"os"
 )
 

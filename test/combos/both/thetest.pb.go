@@ -15,7 +15,7 @@ import bytes "bytes"
 import github_com_gogo_protobuf_sortkeys "github.com/liues1992/gogoprotobuf/sortkeys"
 import github_com_gogo_protobuf_proto "github.com/liues1992/gogoprotobuf/proto"
 
-import github_com_gogo_protobuf_protoc_gen_gogo_descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogo/descriptor"
+import github_com_gogo_protobuf_protoc_gen_gogo_descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogog/descriptor"
 import compress_gzip "compress/gzip"
 import io_ioutil "io/ioutil"
 

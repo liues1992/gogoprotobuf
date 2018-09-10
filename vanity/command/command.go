@@ -52,9 +52,9 @@ import (
 	_ "github.com/liues1992/gogoprotobuf/plugin/union"
 	_ "github.com/liues1992/gogoprotobuf/plugin/unmarshal"
 	"github.com/liues1992/gogoprotobuf/proto"
-	"github.com/liues1992/gogoprotobuf/protoc-gen-gogo/generator"
-	_ "github.com/liues1992/gogoprotobuf/protoc-gen-gogo/grpc"
-	plugin "github.com/liues1992/gogoprotobuf/protoc-gen-gogo/plugin"
+	"github.com/liues1992/gogoprotobuf/protoc-gen-gogog/generator"
+	_ "github.com/liues1992/gogoprotobuf/protoc-gen-gogog/grpc"
+	plugin "github.com/liues1992/gogoprotobuf/protoc-gen-gogog/plugin"
 )
 
 func Read() *plugin.CodeGeneratorRequest {

@@ -130,8 +130,8 @@ import (
 
 	"github.com/liues1992/gogoprotobuf/gogoproto"
 	"github.com/liues1992/gogoprotobuf/proto"
-	descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogo/descriptor"
-	"github.com/liues1992/gogoprotobuf/protoc-gen-gogo/generator"
+	descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogog/descriptor"
+	"github.com/liues1992/gogoprotobuf/protoc-gen-gogog/generator"
 	"github.com/liues1992/gogoprotobuf/vanity"
 )
 

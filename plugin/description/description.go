@@ -81,8 +81,8 @@ import (
 	"fmt"
 	"github.com/liues1992/gogoprotobuf/gogoproto"
 	"github.com/liues1992/gogoprotobuf/proto"
-	descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogo/descriptor"
-	"github.com/liues1992/gogoprotobuf/protoc-gen-gogo/generator"
+	descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogog/descriptor"
+	"github.com/liues1992/gogoprotobuf/protoc-gen-gogog/generator"
 )
 
 type plugin struct {
@@ -107,7 +107,7 @@ func (p *plugin) Generate(file *generator.FileDescriptor) {
 	localName := generator.FileName(file)
 
 	p.PluginImports = generator.NewPluginImports(p.Generator)
-	descriptorPkg := p.NewImport("github.com/liues1992/gogoprotobuf/protoc-gen-gogo/descriptor")
+	descriptorPkg := p.NewImport("github.com/liues1992/gogoprotobuf/protoc-gen-gogog/descriptor")
 	protoPkg := p.NewImport("github.com/liues1992/gogoprotobuf/proto")
 	gzipPkg := p.NewImport("compress/gzip")
 	bytesPkg := p.NewImport("bytes")

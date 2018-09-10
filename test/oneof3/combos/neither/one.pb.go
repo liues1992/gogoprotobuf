@@ -8,7 +8,7 @@ import fmt "fmt"
 import math "math"
 import _ "github.com/liues1992/gogoprotobuf/gogoproto"
 
-import github_com_gogo_protobuf_protoc_gen_gogo_descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogo/descriptor"
+import github_com_gogo_protobuf_protoc_gen_gogo_descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogog/descriptor"
 import github_com_gogo_protobuf_proto "github.com/liues1992/gogoprotobuf/proto"
 import compress_gzip "compress/gzip"
 import bytes "bytes"

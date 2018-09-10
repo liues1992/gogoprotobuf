@@ -39,8 +39,8 @@ import (
 	"testing"
 
 	"github.com/liues1992/gogoprotobuf/proto"
-	base "github.com/liues1992/gogoprotobuf/protoc-gen-gogo/testdata/extension_base"
-	user "github.com/liues1992/gogoprotobuf/protoc-gen-gogo/testdata/extension_user"
+	base "github.com/liues1992/gogoprotobuf/protoc-gen-gogog/testdata/extension_base"
+	user "github.com/liues1992/gogoprotobuf/protoc-gen-gogog/testdata/extension_user"
 )
 
 func TestSingleFieldExtension(t *testing.T) {

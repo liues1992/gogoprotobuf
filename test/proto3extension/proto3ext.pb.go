@@ -6,7 +6,7 @@ package proto3extension
 import proto "github.com/liues1992/gogoprotobuf/proto"
 import fmt "fmt"
 import math "math"
-import descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogo/descriptor"
+import descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogog/descriptor"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal

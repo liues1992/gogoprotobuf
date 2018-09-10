@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	tpb "github.com/liues1992/gogoprotobuf/proto/test_proto"
-	"github.com/liues1992/gogoprotobuf/protoc-gen-gogo/descriptor"
+	"github.com/liues1992/gogoprotobuf/protoc-gen-gogog/descriptor"
 )
 
 func TestMessage(t *testing.T) {

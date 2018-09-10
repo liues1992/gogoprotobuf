@@ -38,8 +38,8 @@ import (
 
 	"github.com/liues1992/gogoprotobuf/gogoproto"
 	"github.com/liues1992/gogoprotobuf/proto"
-	descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogo/descriptor"
-	plugin "github.com/liues1992/gogoprotobuf/protoc-gen-gogo/plugin"
+	descriptor "github.com/liues1992/gogoprotobuf/protoc-gen-gogog/descriptor"
+	plugin "github.com/liues1992/gogoprotobuf/protoc-gen-gogog/plugin"
 )
 
 func (d *FileDescriptor) Messages() []*Descriptor {
