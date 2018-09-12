@@ -66,6 +66,7 @@ import (
 	"github.com/liues1992/gogoprotobuf/protoc-gen-gogog/descriptor"
 	"github.com/liues1992/gogoprotobuf/protoc-gen-gogog/generator/internal/remap"
 	plugin "github.com/liues1992/gogoprotobuf/protoc-gen-gogog/plugin"
+	"reflect"
 )
 
 // generatedCodeVersion indicates a version of the generated code.
@@ -2030,6 +2031,39 @@ var wellKnownTypes = map[string]bool{
 	"BytesValue":  true,
 }
 
+// find tag between backtick, start & end is the position of backtick
+func getLineTag(line string) (tag reflect.StructTag, start int, end int) {
+	start = strings.Index(line, "`")
+	end = strings.LastIndex(line, "`")
+	if end <= start {
+		return
+	}
+	tag = reflect.StructTag(line[start + 1 : end])
+	return
+}
+
+func getTagsInComment(comment string) []reflect.StructTag {
+	split := strings.Split(comment, "\n")
+	var tagsInComment []reflect.StructTag
+	for _, line := range split {
+		tag, _, _ := getLineTag(line)
+		if tag != "" {
+			tagsInComment = append(tagsInComment, tag)
+		}
+	}
+	return tagsInComment
+}
+
+func getTagValue(key string, tags []reflect.StructTag) string{
+	for _, t := range tags {
+		val := t.Get(key)
+		if val != "" {
+			return val
+		}
+	}
+	return ""
+}
+
 // Generate the type and default constant definitions for this Descriptor.
 func (g *Generator) generateMessage(message *Descriptor) {
 	// The full type name
@@ -2116,6 +2150,20 @@ func (g *Generator) generateMessage(message *Descriptor) {
 			} else {
 				jsonTag = jsonName + ",omitempty"
 			}
+			// === Lets play with comments!
+			// Use comment instead of extension gives us advantages:
+			// - Much more flexible
+			// - More readable
+			fieldFullPath := fmt.Sprintf("%s,%d,%d", message.path, messageFieldPath, i)
+			fComment := g.Comments(fieldFullPath)
+			tags := getTagsInComment(fComment)
+			formValidate := getTagValue("validate", tags)
+			formTag := field.GetName()
+			split := getTagValue("split", tags)
+			if split == "true" {
+				formTag += ",split"
+			}
+			// === Parse comment end
 
 			repeatedNativeType := (!field.IsMessage() && !gogoproto.IsCustomType(field) && field.IsRepeated())
 			if !gogoproto.IsNullable(field) && !repeatedNativeType {
@@ -2130,7 +2178,11 @@ func (g *Generator) generateMessage(message *Descriptor) {
 			if gogoMoreTags != nil {
 				moreTags = " " + *gogoMoreTags
 			}
-			tag := fmt.Sprintf("protobuf:%s json:%q%s", g.goTag(message, field, wiretype), jsonTag, moreTags)
+			tag := fmt.Sprintf("protobuf:%s json:%q%s form:%q",
+				g.goTag(message, field, wiretype), jsonTag, moreTags, formTag)
+			if formValidate != "" {
+				tag += fmt.Sprintf(" validate:%q", formValidate)
+			}
 			if *field.Type == descriptor.FieldDescriptorProto_TYPE_MESSAGE && gogoproto.IsEmbed(field) {
 				fieldName = ""
 			}
@@ -2206,7 +2258,6 @@ func (g *Generator) generateMessage(message *Descriptor) {
 				fieldDeprecated = deprecationComment
 			}
 
-			fieldFullPath := fmt.Sprintf("%s,%d,%d", message.path, messageFieldPath, i)
 			g.PrintComments(fieldFullPath)
 			g.P(Annotate(message.file, fieldFullPath, fieldName), "\t", typename, "\t`", tag, "`", fieldDeprecated)
 			if !gogoproto.IsStdTime(field) && !gogoproto.IsStdDuration(field) && !gogoproto.IsCustomType(field) && !gogoproto.IsCastType(field) {
